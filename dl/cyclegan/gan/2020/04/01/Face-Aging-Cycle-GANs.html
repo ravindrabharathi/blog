@@ -13,10 +13,11 @@
 <link rel="canonical" href="https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html" />
 <meta property="og:url" content="https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html" />
 <meta property="og:site_name" content="Ravindra Bharathi’s Blog" />
+<meta property="og:image" content="https://ravindrabharathi.github.io/blog/images/o2y-1.gif" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"map age progression in faces in images from the UTKFace dataset using CycleGANs.","url":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html","@type":"BlogPosting","headline":"Face Aging using CycleGANs","dateModified":"2020-04-01T00:00:00-05:00","datePublished":"2020-04-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html"},"@context":"https://schema.org"}</script>
+{"description":"map age progression in faces in images from the UTKFace dataset using CycleGANs.","url":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html","@type":"BlogPosting","headline":"Face Aging using CycleGANs","dateModified":"2020-04-01T00:00:00-05:00","datePublished":"2020-04-01T00:00:00-05:00","image":"https://ravindrabharathi.github.io/blog/images/o2y-1.gif","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/01/Face-Aging-Cycle-GANs.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ravindrabharathi.github.io/blog/feed.xml" title="Ravindra Bharathi's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -130,13 +131,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/ravindrabharathi/blog/blob/master/_notebooks/2020-04-01-Face-Aging-Cycle-GANs.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>CycleGANs were introduced in this <a href="https://arxiv.org/abs/1703.10593">paper</a> titled <strong>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</strong> where the authors presented an approach for learning to translate an image from a source domain X to a target domain Y in the absence of paired examples.</p>
@@ -47349,6 +47343,20 @@ CCGEEELuxv8FjNr3Og4pmx4AAAAASUVORK5CYII=
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Here-are-some-samples-of-generated-images-:">Here are some samples of generated images :<a class="anchor-link" href="#Here-are-some-samples-of-generated-images-:"> </a></h3><p><img src="https://raw.githubusercontent.com/ravindrabharathi/FaceAgingGAN/master/images/o2y-1.gif" alt="Old to young sample 1" /></p>
+<hr />
+<p><img src="https://raw.githubusercontent.com/ravindrabharathi/FaceAgingGAN/master/images/o2y-2.gif" alt="Old to young sample 2" /></p>
+<hr />
+<p><img src="https://raw.githubusercontent.com/ravindrabharathi/FaceAgingGAN/master/images/o2y-3.gif" alt="Old to young sample 3" /></p>
+<hr />
+<p><img src="https://raw.githubusercontent.com/ravindrabharathi/FaceAgingGAN/master/images/02y-4.gif" alt="Old to young sample 4" /></p>
+<hr />
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Training-the-models-for-more-epochs-will-make-the-results-better,-especially-for-Young-to-Old-Translation-.-Also-we-used-128x128-images-due-to-time-and-compute-constraints-.-Training-on-the-original-200x200-image-size-would-have-yielded-better-results">Training the models for more epochs will make the results better, especially for Young to Old Translation . Also we used 128x128 images due to time and compute constraints . Training on the original 200x200 image size would have yielded better results<a class="anchor-link" href="#Training-the-models-for-more-epochs-will-make-the-results-better,-especially-for-Young-to-Old-Translation-.-Also-we-used-128x128-images-due-to-time-and-compute-constraints-.-Training-on-the-original-200x200-image-size-would-have-yielded-better-results"> </a></h4>
