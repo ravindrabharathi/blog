@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Face Aging using CycleGANs" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="map age progression in faces in images from the UTKFace dataset using CycleGANs." />
-<meta property="og:description" content="map age progression in faces in images from the UTKFace dataset using CycleGANs." />
+<meta name="description" content="map age progression in faces from the UTKFace dataset using CycleGANs." />
+<meta property="og:description" content="map age progression in faces from the UTKFace dataset using CycleGANs." />
 <link rel="canonical" href="https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html" />
 <meta property="og:url" content="https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html" />
 <meta property="og:site_name" content="Ravindra Bharathi’s Blog" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-02T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"map age progression in faces in images from the UTKFace dataset using CycleGANs.","url":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html","@type":"BlogPosting","headline":"Face Aging using CycleGANs","dateModified":"2020-04-02T00:00:00-05:00","datePublished":"2020-04-02T00:00:00-05:00","image":"https://ravindrabharathi.github.io/blog/images/o2y-1.gif","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html"},"@context":"https://schema.org"}</script>
+{"description":"map age progression in faces from the UTKFace dataset using CycleGANs.","url":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html","@type":"BlogPosting","headline":"Face Aging using CycleGANs","dateModified":"2020-04-02T00:00:00-05:00","datePublished":"2020-04-02T00:00:00-05:00","image":"https://ravindrabharathi.github.io/blog/images/o2y-1.gif","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/dl/cyclegan/gan/2020/04/02/Face-Aging-Cycle-GANs.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ravindrabharathi.github.io/blog/feed.xml" title="Ravindra Bharathi's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,13 +72,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Face Aging using CycleGANs</h1><p class="page-description">map age progression in faces in images from the UTKFace dataset using CycleGANs.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-02T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Face Aging using CycleGANs</h1><p class="page-description">map age progression in faces from the UTKFace dataset using CycleGANs.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-02T00:00:00-05:00" itemprop="datePublished">
         Apr 2, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      20 min read
+      19 min read
     
 </span></p>
 
@@ -113,7 +113,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>CycleGANs were introduced in this <a href="https://arxiv.org/abs/1703.10593">paper</a> titled <strong>Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</strong> where the authors presented an approach for learning to translate an image from a source domain X to a target domain Y in the absence of paired examples.</p>
-<p>For the images of faces with various ages we will be using the <strong>UTKFace dataset</strong> wich has a cropped image set of only faces marked with age , gender , race , etc.</p>
+<p>For the images of faces with various ages we will be using the <strong>UTKFace dataset</strong> which has a cropped image set of only faces marked with age , gender , race , etc.</p>
 <p>We will be using following two good references that use CycleGAN in order to build and train our models</p>
 <ol>
 <li><a href="https://github.com/sungnam0/Face-Aging-with-CycleGAN">https://github.com/sungnam0/Face-Aging-with-CycleGAN</a>
@@ -125,7 +125,7 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="import-necessary-modules">import necessary modules<a class="anchor-link" href="#import-necessary-modules"> </a></h4>
+<h4 id="Import-necessary-modules">Import necessary modules<a class="anchor-link" href="#Import-necessary-modules"> </a></h4>
 </div>
 </div>
 </div>
@@ -192,7 +192,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="set-tf-backend-config-to-allocate-memory-as-needed-instead-of-pre-allocating">set tf backend config to allocate memory as needed instead of pre-allocating<a class="anchor-link" href="#set-tf-backend-config-to-allocate-memory-as-needed-instead-of-pre-allocating"> </a></h4>
+<h4 id="Set-tf-backend-config-to-allocate-memory-as-needed-instead-of-pre-allocating">Set tf backend config to allocate memory as needed instead of pre-allocating<a class="anchor-link" href="#Set-tf-backend-config-to-allocate-memory-as-needed-instead-of-pre-allocating"> </a></h4>
 </div>
 </div>
 </div>
@@ -219,7 +219,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="mount-google-drive">mount google drive<a class="anchor-link" href="#mount-google-drive"> </a></h4>
+<h4 id="Mount-google-drive-to-retrieve-and-store-files-used-in-this-project">Mount google drive to retrieve and store files used in this project<a class="anchor-link" href="#Mount-google-drive-to-retrieve-and-store-files-used-in-this-project"> </a></h4>
 </div>
 </div>
 </div>
@@ -296,7 +296,7 @@ drwx------ 2 root root      4096 Aug 21 08:41 UTKFace
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="get-the-UTKFace-dataset">get the UTKFace dataset<a class="anchor-link" href="#get-the-UTKFace-dataset"> </a></h4>
+<h4 id="Get-the-UTKFace-dataset">Get the UTKFace dataset<a class="anchor-link" href="#Get-the-UTKFace-dataset"> </a></h4>
 </div>
 </div>
 </div>
@@ -838,28 +838,9 @@ memory usage: 926.2+ KB
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#import os</span>
-
-<span class="c1">#utk_data=pd.read_csv(&#39;/content/drive/My Drive/EIP3/session7/utk_data.csv&#39;)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="get-the-iames-belonging-to-the-two-Domains-and-save-as-a-compressed-numpy-array-so-that-we-can-load-them-when-necesary-instead-of-processing-the-UTKFace-dataset-multiple-times">get the iames belonging to the two Domains and save as a compressed numpy array so that we can load them when necesary instead of processing the UTKFace dataset multiple times<a class="anchor-link" href="#get-the-iames-belonging-to-the-two-Domains-and-save-as-a-compressed-numpy-array-so-that-we-can-load-them-when-necesary-instead-of-processing-the-UTKFace-dataset-multiple-times"> </a></h4>
+<h4 id="Get-the-images-belonging-to-the-two-Domains-and-save-as-a-compressed-numpy-array-so-that-we-can-load-them-when-necesary-instead-of-processing-the-UTKFace-dataset-multiple-times">Get the images belonging to the two Domains and save as a compressed numpy array so that we can load them when necesary instead of processing the UTKFace dataset multiple times<a class="anchor-link" href="#Get-the-images-belonging-to-the-two-Domains-and-save-as-a-compressed-numpy-array-so-that-we-can-load-them-when-necesary-instead-of-processing-the-UTKFace-dataset-multiple-times"> </a></h4>
 </div>
 </div>
 </div>
@@ -1041,7 +1022,7 @@ images_B :
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="load-the-saved-numpy-arrays-and-plot-some-images-from-either-domain">load the saved numpy arrays and plot some images from either domain<a class="anchor-link" href="#load-the-saved-numpy-arrays-and-plot-some-images-from-either-domain"> </a></h4>
+<h4 id="Load-the-saved-numpy-arrays-and-plot-some-images-from-either-domain">Load the saved numpy arrays and plot some images from either domain<a class="anchor-link" href="#Load-the-saved-numpy-arrays-and-plot-some-images-from-either-domain"> </a></h4>
 </div>
 </div>
 </div>
@@ -2861,7 +2842,7 @@ YsWKFZ8g/h/uAC3SGBtVUgAAAABJRU5ErkJggg==
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="install-keras-contrib-so-that-we-can-use-InstanceNormalization-instead-of-BatchNormalization">install keras-contrib so that we can use InstanceNormalization instead of BatchNormalization<a class="anchor-link" href="#install-keras-contrib-so-that-we-can-use-InstanceNormalization-instead-of-BatchNormalization"> </a></h4>
+<h4 id="Install-keras-contrib-so-that-we-can-use-InstanceNormalization-instead-of-BatchNormalization">Install keras-contrib so that we can use InstanceNormalization instead of BatchNormalization<a class="anchor-link" href="#Install-keras-contrib-so-that-we-can-use-InstanceNormalization-instead-of-BatchNormalization"> </a></h4>
 </div>
 </div>
 </div>
@@ -2876,37 +2857,6 @@ YsWKFZ8g/h/uAC3SGBtVUgAAAABJRU5ErkJggg==
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting git+https://www.github.com/keras-team/keras-contrib.git
-  Cloning https://www.github.com/keras-team/keras-contrib.git to /tmp/pip-req-build-225cusg3
-  Running command git clone -q https://www.github.com/keras-team/keras-contrib.git /tmp/pip-req-build-225cusg3
-Requirement already satisfied: keras in /usr/local/lib/python3.6/dist-packages (from keras-contrib==2.0.8) (2.2.4)
-Requirement already satisfied: keras-preprocessing&gt;=1.0.5 in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (1.1.0)
-Requirement already satisfied: keras-applications&gt;=1.0.6 in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (1.0.8)
-Requirement already satisfied: pyyaml in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (3.13)
-Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (1.12.0)
-Requirement already satisfied: scipy&gt;=0.14 in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (1.3.1)
-Requirement already satisfied: numpy&gt;=1.9.1 in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (1.16.4)
-Requirement already satisfied: h5py in /usr/local/lib/python3.6/dist-packages (from keras-&gt;keras-contrib==2.0.8) (2.8.0)
-Building wheels for collected packages: keras-contrib
-  Building wheel for keras-contrib (setup.py) ... done
-  Created wheel for keras-contrib: filename=keras_contrib-2.0.8-cp36-none-any.whl size=101066 sha256=4c2686ed2595b2fbcc1fd6df0f014cb70df688e3b37ff72e3fb6ef31dd35e615
-  Stored in directory: /tmp/pip-ephem-wheel-cache-rkeooafj/wheels/11/27/c8/4ed56de7b55f4f61244e2dc6ef3cdbaff2692527a2ce6502ba
-Successfully built keras-contrib
-Installing collected packages: keras-contrib
-Successfully installed keras-contrib-2.0.8
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2933,7 +2883,7 @@ Successfully installed keras-contrib-2.0.8
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="define-helper-functions-for-the-various-components-of-the-Model-that-we-are-going-to-build">define helper functions for the various components of the Model that we are going to build<a class="anchor-link" href="#define-helper-functions-for-the-various-components-of-the-Model-that-we-are-going-to-build"> </a></h4>
+<h4 id="Define-helper-functions-for-the-various-components-of-the-Model-that-we-are-going-to-build">Define helper functions for the various components of the Model that we are going to build<a class="anchor-link" href="#Define-helper-functions-for-the-various-components-of-the-Model-that-we-are-going-to-build"> </a></h4>
 </div>
 </div>
 </div>
