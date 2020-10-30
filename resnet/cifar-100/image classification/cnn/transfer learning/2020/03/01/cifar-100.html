@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      49 min read
+      35 min read
     
 </span></p>
 
@@ -149,7 +149,7 @@ The first part will be to train with the frozen layers in base model . After tra
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="install-the-required-files-from-qubvel-keras-applications-project-in-order-to-get-the-pretrained-ResNet-model">install the required files from qubvel keras applications project in order to get the pretrained ResNet model<a class="anchor-link" href="#install-the-required-files-from-qubvel-keras-applications-project-in-order-to-get-the-pretrained-ResNet-model"> </a></h3>
+<h3 id="Install-the-required-files-from-qubvel-keras-applications-project-in-order-to-get-the-pretrained-ResNet-model">Install the required files from qubvel keras applications project in order to get the pretrained ResNet model<a class="anchor-link" href="#Install-the-required-files-from-qubvel-keras-applications-project-in-order-to-get-the-pretrained-ResNet-model"> </a></h3>
 </div>
 </div>
 </div>
@@ -200,7 +200,7 @@ Successfully installed image-classifiers-1.0.0
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="import-necessary-keras-modules-,-numpy-and-matplotlib">import necessary keras modules , numpy and matplotlib<a class="anchor-link" href="#import-necessary-keras-modules-,-numpy-and-matplotlib"> </a></h3>
+<h3 id="Import-necessary-keras-modules-,-numpy-and-matplotlib">Import necessary keras modules , numpy and matplotlib<a class="anchor-link" href="#Import-necessary-keras-modules-,-numpy-and-matplotlib"> </a></h3>
 </div>
 </div>
 </div>
@@ -227,34 +227,6 @@ Successfully installed image-classifiers-1.0.0
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-<p style="color: red;">
-The default version of TensorFlow in Colab will soon switch to TensorFlow 2.x.<br />
-We recommend you <a href="https://www.tensorflow.org/guide/migrate" target="_blank">upgrade</a> now 
-or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tensorflow_version 1.x</code> magic:
-<a href="https://colab.research.google.com/notebooks/tensorflow_version.ipynb" target="_blank">more info</a>.</p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -395,7 +367,7 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>store cifar100 train and test images in a local data folder. We will load these images using an imagedatagenerator and resize to 224x224 which is default size for Resnet-imagenet models</p>
+<p>Store cifar100 train and test images in a local data folder. We will load these images using an imagedatagenerator and resize to 224x224 which is default size for Resnet-imagenet models</p>
 
 </div>
 </div>
@@ -407,7 +379,7 @@ or ensure your notebook will continue to use TensorFlow 1.x via the <code>%tenso
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm -R ./data/
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm -R ./data/  # remove old data direrctory to clean up 
 </pre></div>
 
     </div>
@@ -654,7 +626,7 @@ current working directory is /content
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="mount-google-drive-to-save-best-model-while-training">mount google drive to save best model while training<a class="anchor-link" href="#mount-google-drive-to-save-best-model-while-training"> </a></h3>
+<h3 id="Mount-google-drive-to-save-best-model-while-training">Mount google drive to save best model while training<a class="anchor-link" href="#Mount-google-drive-to-save-best-model-while-training"> </a></h3>
 </div>
 </div>
 </div>
@@ -696,7 +668,7 @@ Mounted at /gdrive
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="import-pandas-and-create-a-dataframe-with-image-files-and-labels-information.-We-will-use-this-dataframe-with-Keras-imagedatagenerator-to-load-images-for-training-and-testing-and-calculate-loss-using-the-corresponding-label-values">import pandas and create a dataframe with image files and labels information. We will use this dataframe with Keras imagedatagenerator to load images for training and testing and calculate loss using the corresponding label values<a class="anchor-link" href="#import-pandas-and-create-a-dataframe-with-image-files-and-labels-information.-We-will-use-this-dataframe-with-Keras-imagedatagenerator-to-load-images-for-training-and-testing-and-calculate-loss-using-the-corresponding-label-values"> </a></h3>
+<h3 id="Import-pandas-and-create-a-dataframe-with-image-files-and-labels-information.-We-will-use-this-dataframe-with-Keras-imagedatagenerator-to-load-images-for-training-and-testing-and-calculate-loss-using-the-corresponding-label-values">Import pandas and create a dataframe with image files and labels information. We will use this dataframe with Keras imagedatagenerator to load images for training and testing and calculate loss using the corresponding label values<a class="anchor-link" href="#Import-pandas-and-create-a-dataframe-with-image-files-and-labels-information.-We-will-use-this-dataframe-with-Keras-imagedatagenerator-to-load-images-for-training-and-testing-and-calculate-loss-using-the-corresponding-label-values"> </a></h3>
 </div>
 </div>
 </div>
@@ -930,7 +902,7 @@ None
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="function-for-random-pad-crop-augmentation">function for random-pad-crop augmentation<a class="anchor-link" href="#function-for-random-pad-crop-augmentation"> </a></h3>
+<h3 id="Custom-function-for-random-pad-crop-augmentation">Custom function for random-pad-crop augmentation<a class="anchor-link" href="#Custom-function-for-random-pad-crop-augmentation"> </a></h3>
 </div>
 </div>
 </div>
@@ -968,7 +940,7 @@ None
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="we-will-now-get-the-ResNet34-model-weights-for-imagenet-(Cifar-is-not-available-in-this-library).">we will now get the ResNet34 model weights for imagenet (Cifar is not available in this library).<a class="anchor-link" href="#we-will-now-get-the-ResNet34-model-weights-for-imagenet-(Cifar-is-not-available-in-this-library)."> </a></h3><h3 id="input-shape-set-to-224,224,3">input shape set to 224,224,3<a class="anchor-link" href="#input-shape-set-to-224,224,3"> </a></h3><h3 id="Add-GlobalAveragePooling-to-convert-these-to-1D-inputs-suitable-for-the-softmax-prediction-layer">Add GlobalAveragePooling to convert these to 1D inputs suitable for the softmax prediction layer<a class="anchor-link" href="#Add-GlobalAveragePooling-to-convert-these-to-1D-inputs-suitable-for-the-softmax-prediction-layer"> </a></h3><h3 id="Add-a-Dense-Layer-instead-of-the-one-we-removed-from-the-pretrained-model">Add a Dense Layer instead of the one we removed from the pretrained model<a class="anchor-link" href="#Add-a-Dense-Layer-instead-of-the-one-we-removed-from-the-pretrained-model"> </a></h3><h3 id="Add-softmax-prediction">Add softmax prediction<a class="anchor-link" href="#Add-softmax-prediction"> </a></h3><h3 id="for-the-first-train-run-we-will-freeze-the-all-layers-of-the-pretrained-model-except-the-last-11-layers">for the first train run we will freeze the all layers of the pretrained model except the last 11 layers<a class="anchor-link" href="#for-the-first-train-run-we-will-freeze-the-all-layers-of-the-pretrained-model-except-the-last-11-layers"> </a></h3>
+<h3 id="We-will-now-get-the-ResNet34-model-weights-for-imagenet-(Cifar-is-not-available-in-this-library).">We will now get the ResNet34 model weights for imagenet (Cifar is not available in this library).<a class="anchor-link" href="#We-will-now-get-the-ResNet34-model-weights-for-imagenet-(Cifar-is-not-available-in-this-library)."> </a></h3><h3 id="input-shape-set-to-224,224,3">input shape set to 224,224,3<a class="anchor-link" href="#input-shape-set-to-224,224,3"> </a></h3><h3 id="Add-GlobalAveragePooling-to-convert-these-to-1D-inputs-suitable-for-the-softmax-prediction-layer">Add GlobalAveragePooling to convert these to 1D inputs suitable for the softmax prediction layer<a class="anchor-link" href="#Add-GlobalAveragePooling-to-convert-these-to-1D-inputs-suitable-for-the-softmax-prediction-layer"> </a></h3><h3 id="Add-a-Dense-Layer-instead-of-the-one-we-removed-from-the-pretrained-model">Add a Dense Layer instead of the one we removed from the pretrained model<a class="anchor-link" href="#Add-a-Dense-Layer-instead-of-the-one-we-removed-from-the-pretrained-model"> </a></h3><h3 id="Add-softmax-prediction">Add softmax prediction<a class="anchor-link" href="#Add-softmax-prediction"> </a></h3><h3 id="for-the-first-train-run-we-will-freeze-the-all-layers-of-the-pretrained-model-except-the-last-11-layers">for the first train run we will freeze the all layers of the pretrained model except the last 11 layers<a class="anchor-link" href="#for-the-first-train-run-we-will-freeze-the-all-layers-of-the-pretrained-model-except-the-last-11-layers"> </a></h3>
 </div>
 </div>
 </div>
@@ -979,7 +951,8 @@ None
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">GlobalAveragePooling2D</span><span class="p">,</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Lambda</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">GlobalMaxPooling2D</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># build model</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">GlobalAveragePooling2D</span><span class="p">,</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Lambda</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">GlobalMaxPooling2D</span>
 
 <span class="c1">#base modek from REsnet34 </span>
 <span class="n">base_model</span> <span class="o">=</span> <span class="n">ResNet34</span><span class="p">(</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span><span class="mi">224</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;imagenet&#39;</span><span class="p">,</span> <span class="n">include_top</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1003,585 +976,6 @@ None
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:190: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:197: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:203: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:207: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:216: The name tf.is_variable_initialized is deprecated. Please use tf.compat.v1.is_variable_initialized instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:223: The name tf.variables_initializer is deprecated. Please use tf.compat.v1.variables_initializer instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:2041: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:148: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
-
-WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4267: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
-
-Downloading data from https://github.com/qubvel/classification_models/releases/download/0.0.1/resnet34_imagenet_1000_no_top.h5
-85524480/85521592 [==============================] - 3s 0us/step
-&lt;keras.engine.input_layer.InputLayer object at 0x7fef643e3400&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef64b22128&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef643e50b8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef5436d160&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef543195f8&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef54319d30&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54319f60&gt; False
-&lt;keras.layers.pooling.MaxPooling2D object at 0x7fef54323400&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef542df3c8&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef542df898&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54298278&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef542dfc18&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef542df6a0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef542a6a58&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef542a6e80&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef542a6fd0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef542df860&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef54271160&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef54271208&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef542717f0&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54271710&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef54212518&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef5422cfd0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef54236e48&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54236dd8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef54242748&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef541eacc0&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef541ead68&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef541eafd0&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef541f1390&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef541fc630&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef541b1c88&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef541b1f98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef541b8a90&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef541c6d30&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef5417ba58&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef5417bb00&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef5417bf98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef5413a828&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef5411bf28&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef54147748&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef54147d68&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54147f28&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef540d06d8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef5417f550&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef54090748&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef540907f0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef54090cf8&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef540975c0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef540974a8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef54058748&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef54058e10&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef54058e48&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef5405d4a8&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef5401f518&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef5401f5c0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef5401f908&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef5401fa20&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef54025278&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef501364e0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef50136e10&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef50136f98&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef5013c240&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef500fe2b0&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef500fe358&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef500fe860&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef500fe6a0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef500fefd0&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef500c5278&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef500c5fd0&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef500c5e80&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef50067550&gt; False
-&lt;keras.layers.merge.Add object at 0x7fef50089048&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef500890f0&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef500896d8&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef50045d30&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef50089d68&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef50055cf8&gt; False
-&lt;keras.layers.core.Activation object at 0x7fef5004ae10&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7fef5005ad30&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef01b66a0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7fef500895f8&gt; False
-&lt;keras.layers.merge.Add object at 0x7feef016bcf8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef016bf28&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef01c7eb8&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef01733c8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef01957b8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef0133cf8&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef01a6eb8&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef013bb00&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef0142860&gt; False
-&lt;keras.layers.merge.Add object at 0x7feef00faac8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef00fab70&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef00faf98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef0101208&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef0110d68&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef00c1a90&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef00c1f98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef00c1fd0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef00c97f0&gt; False
-&lt;keras.layers.merge.Add object at 0x7feef0088860&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef0088908&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef0088e10&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef008f6d8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef008f5c0&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef004f828&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef004fef0&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef004ff28&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef0058588&gt; False
-&lt;keras.layers.merge.Add object at 0x7feef00185f8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feef00186a0&gt; False
-&lt;keras.layers.core.Activation object at 0x7feef0018b00&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feef0020400&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feef0020358&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeeffe15c0&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeeffe1cc0&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeeffe1ef0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeeffe8320&gt; False
-&lt;keras.layers.merge.Add object at 0x7feeeffa7390&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeeffa7438&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeeffa7780&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeeffa7ef0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeeff37940&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefef2358&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeefef2c88&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefef2e10&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefef2f60&gt; False
-&lt;keras.layers.merge.Add object at 0x7feeefeba128&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefeba1d0&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeefeba7b8&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefe72e10&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefe78320&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefe82dd8&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeefe8ae80&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefe8ae10&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefe2d860&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefeba6d8&gt; False
-&lt;keras.layers.merge.Add object at 0x7feeefe47dd8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefe47ef0&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeefe39f98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefe504a8&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefe57d30&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefe11dd8&gt; False
-&lt;keras.layers.core.Activation object at 0x7feeefdfff98&gt; False
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefe18be0&gt; False
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefe24eb8&gt; False
-&lt;keras.layers.merge.Add object at 0x7feeefdd7ba8&gt; False
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefdd7c50&gt; True
-&lt;keras.layers.core.Activation object at 0x7feeefdd7f98&gt; True
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefddf278&gt; True
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefddf908&gt; True
-&lt;keras.layers.normalization.BatchNormalization object at 0x7feeefd9eb70&gt; True
-&lt;keras.layers.core.Activation object at 0x7feeefd9ef60&gt; True
-&lt;keras.layers.convolutional.ZeroPadding2D object at 0x7feeefda6978&gt; True
-&lt;keras.layers.convolutional.Conv2D object at 0x7feeefd33fd0&gt; True
-&lt;keras.layers.merge.Add object at 0x7feeefd68940&gt; True
-&lt;keras.layers.normalization.BatchNormalization object at 0x7fef542df390&gt; True
-&lt;keras.layers.core.Activation object at 0x7feeefd68e10&gt; True
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="print-model-summary">print model summary<a class="anchor-link" href="#print-model-summary"> </a></h3>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Model: &#34;model_2&#34;
-__________________________________________________________________________________________________
-Layer (type)                    Output Shape         Param #     Connected to                     
-==================================================================================================
-data (InputLayer)               (None, 224, 224, 3)  0                                            
-__________________________________________________________________________________________________
-bn_data (BatchNormalization)    (None, 224, 224, 3)  9           data[0][0]                       
-__________________________________________________________________________________________________
-zero_padding2d_1 (ZeroPadding2D (None, 230, 230, 3)  0           bn_data[0][0]                    
-__________________________________________________________________________________________________
-conv0 (Conv2D)                  (None, 112, 112, 64) 9408        zero_padding2d_1[0][0]           
-__________________________________________________________________________________________________
-bn0 (BatchNormalization)        (None, 112, 112, 64) 256         conv0[0][0]                      
-__________________________________________________________________________________________________
-relu0 (Activation)              (None, 112, 112, 64) 0           bn0[0][0]                        
-__________________________________________________________________________________________________
-zero_padding2d_2 (ZeroPadding2D (None, 114, 114, 64) 0           relu0[0][0]                      
-__________________________________________________________________________________________________
-pooling0 (MaxPooling2D)         (None, 56, 56, 64)   0           zero_padding2d_2[0][0]           
-__________________________________________________________________________________________________
-stage1_unit1_bn1 (BatchNormaliz (None, 56, 56, 64)   256         pooling0[0][0]                   
-__________________________________________________________________________________________________
-stage1_unit1_relu1 (Activation) (None, 56, 56, 64)   0           stage1_unit1_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_3 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit1_conv1 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_3[0][0]           
-__________________________________________________________________________________________________
-stage1_unit1_bn2 (BatchNormaliz (None, 56, 56, 64)   256         stage1_unit1_conv1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit1_relu2 (Activation) (None, 56, 56, 64)   0           stage1_unit1_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_4 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit1_relu2[0][0]         
-__________________________________________________________________________________________________
-stage1_unit1_conv2 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_4[0][0]           
-__________________________________________________________________________________________________
-stage1_unit1_sc (Conv2D)        (None, 56, 56, 64)   4096        stage1_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-add_1 (Add)                     (None, 56, 56, 64)   0           stage1_unit1_conv2[0][0]         
-                                                                 stage1_unit1_sc[0][0]            
-__________________________________________________________________________________________________
-stage1_unit2_bn1 (BatchNormaliz (None, 56, 56, 64)   256         add_1[0][0]                      
-__________________________________________________________________________________________________
-stage1_unit2_relu1 (Activation) (None, 56, 56, 64)   0           stage1_unit2_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_5 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit2_relu1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit2_conv1 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_5[0][0]           
-__________________________________________________________________________________________________
-stage1_unit2_bn2 (BatchNormaliz (None, 56, 56, 64)   256         stage1_unit2_conv1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit2_relu2 (Activation) (None, 56, 56, 64)   0           stage1_unit2_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_6 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit2_relu2[0][0]         
-__________________________________________________________________________________________________
-stage1_unit2_conv2 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_6[0][0]           
-__________________________________________________________________________________________________
-add_2 (Add)                     (None, 56, 56, 64)   0           stage1_unit2_conv2[0][0]         
-                                                                 add_1[0][0]                      
-__________________________________________________________________________________________________
-stage1_unit3_bn1 (BatchNormaliz (None, 56, 56, 64)   256         add_2[0][0]                      
-__________________________________________________________________________________________________
-stage1_unit3_relu1 (Activation) (None, 56, 56, 64)   0           stage1_unit3_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_7 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit3_relu1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit3_conv1 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_7[0][0]           
-__________________________________________________________________________________________________
-stage1_unit3_bn2 (BatchNormaliz (None, 56, 56, 64)   256         stage1_unit3_conv1[0][0]         
-__________________________________________________________________________________________________
-stage1_unit3_relu2 (Activation) (None, 56, 56, 64)   0           stage1_unit3_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_8 (ZeroPadding2D (None, 58, 58, 64)   0           stage1_unit3_relu2[0][0]         
-__________________________________________________________________________________________________
-stage1_unit3_conv2 (Conv2D)     (None, 56, 56, 64)   36864       zero_padding2d_8[0][0]           
-__________________________________________________________________________________________________
-add_3 (Add)                     (None, 56, 56, 64)   0           stage1_unit3_conv2[0][0]         
-                                                                 add_2[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit1_bn1 (BatchNormaliz (None, 56, 56, 64)   256         add_3[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit1_relu1 (Activation) (None, 56, 56, 64)   0           stage2_unit1_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_9 (ZeroPadding2D (None, 58, 58, 64)   0           stage2_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit1_conv1 (Conv2D)     (None, 28, 28, 128)  73728       zero_padding2d_9[0][0]           
-__________________________________________________________________________________________________
-stage2_unit1_bn2 (BatchNormaliz (None, 28, 28, 128)  512         stage2_unit1_conv1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit1_relu2 (Activation) (None, 28, 28, 128)  0           stage2_unit1_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_10 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit1_relu2[0][0]         
-__________________________________________________________________________________________________
-stage2_unit1_conv2 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_10[0][0]          
-__________________________________________________________________________________________________
-stage2_unit1_sc (Conv2D)        (None, 28, 28, 128)  8192        stage2_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-add_4 (Add)                     (None, 28, 28, 128)  0           stage2_unit1_conv2[0][0]         
-                                                                 stage2_unit1_sc[0][0]            
-__________________________________________________________________________________________________
-stage2_unit2_bn1 (BatchNormaliz (None, 28, 28, 128)  512         add_4[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit2_relu1 (Activation) (None, 28, 28, 128)  0           stage2_unit2_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_11 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit2_relu1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit2_conv1 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_11[0][0]          
-__________________________________________________________________________________________________
-stage2_unit2_bn2 (BatchNormaliz (None, 28, 28, 128)  512         stage2_unit2_conv1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit2_relu2 (Activation) (None, 28, 28, 128)  0           stage2_unit2_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_12 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit2_relu2[0][0]         
-__________________________________________________________________________________________________
-stage2_unit2_conv2 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_12[0][0]          
-__________________________________________________________________________________________________
-add_5 (Add)                     (None, 28, 28, 128)  0           stage2_unit2_conv2[0][0]         
-                                                                 add_4[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit3_bn1 (BatchNormaliz (None, 28, 28, 128)  512         add_5[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit3_relu1 (Activation) (None, 28, 28, 128)  0           stage2_unit3_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_13 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit3_relu1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit3_conv1 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_13[0][0]          
-__________________________________________________________________________________________________
-stage2_unit3_bn2 (BatchNormaliz (None, 28, 28, 128)  512         stage2_unit3_conv1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit3_relu2 (Activation) (None, 28, 28, 128)  0           stage2_unit3_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_14 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit3_relu2[0][0]         
-__________________________________________________________________________________________________
-stage2_unit3_conv2 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_14[0][0]          
-__________________________________________________________________________________________________
-add_6 (Add)                     (None, 28, 28, 128)  0           stage2_unit3_conv2[0][0]         
-                                                                 add_5[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit4_bn1 (BatchNormaliz (None, 28, 28, 128)  512         add_6[0][0]                      
-__________________________________________________________________________________________________
-stage2_unit4_relu1 (Activation) (None, 28, 28, 128)  0           stage2_unit4_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_15 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit4_relu1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit4_conv1 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_15[0][0]          
-__________________________________________________________________________________________________
-stage2_unit4_bn2 (BatchNormaliz (None, 28, 28, 128)  512         stage2_unit4_conv1[0][0]         
-__________________________________________________________________________________________________
-stage2_unit4_relu2 (Activation) (None, 28, 28, 128)  0           stage2_unit4_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_16 (ZeroPadding2 (None, 30, 30, 128)  0           stage2_unit4_relu2[0][0]         
-__________________________________________________________________________________________________
-stage2_unit4_conv2 (Conv2D)     (None, 28, 28, 128)  147456      zero_padding2d_16[0][0]          
-__________________________________________________________________________________________________
-add_7 (Add)                     (None, 28, 28, 128)  0           stage2_unit4_conv2[0][0]         
-                                                                 add_6[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit1_bn1 (BatchNormaliz (None, 28, 28, 128)  512         add_7[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit1_relu1 (Activation) (None, 28, 28, 128)  0           stage3_unit1_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_17 (ZeroPadding2 (None, 30, 30, 128)  0           stage3_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit1_conv1 (Conv2D)     (None, 14, 14, 256)  294912      zero_padding2d_17[0][0]          
-__________________________________________________________________________________________________
-stage3_unit1_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit1_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit1_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit1_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_18 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit1_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit1_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_18[0][0]          
-__________________________________________________________________________________________________
-stage3_unit1_sc (Conv2D)        (None, 14, 14, 256)  32768       stage3_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-add_8 (Add)                     (None, 14, 14, 256)  0           stage3_unit1_conv2[0][0]         
-                                                                 stage3_unit1_sc[0][0]            
-__________________________________________________________________________________________________
-stage3_unit2_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_8[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit2_relu1 (Activation) (None, 14, 14, 256)  0           stage3_unit2_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_19 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit2_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit2_conv1 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_19[0][0]          
-__________________________________________________________________________________________________
-stage3_unit2_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit2_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit2_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit2_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_20 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit2_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit2_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_20[0][0]          
-__________________________________________________________________________________________________
-add_9 (Add)                     (None, 14, 14, 256)  0           stage3_unit2_conv2[0][0]         
-                                                                 add_8[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit3_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_9[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit3_relu1 (Activation) (None, 14, 14, 256)  0           stage3_unit3_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_21 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit3_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit3_conv1 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_21[0][0]          
-__________________________________________________________________________________________________
-stage3_unit3_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit3_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit3_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit3_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_22 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit3_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit3_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_22[0][0]          
-__________________________________________________________________________________________________
-add_10 (Add)                    (None, 14, 14, 256)  0           stage3_unit3_conv2[0][0]         
-                                                                 add_9[0][0]                      
-__________________________________________________________________________________________________
-stage3_unit4_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_10[0][0]                     
-__________________________________________________________________________________________________
-stage3_unit4_relu1 (Activation) (None, 14, 14, 256)  0           stage3_unit4_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_23 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit4_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit4_conv1 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_23[0][0]          
-__________________________________________________________________________________________________
-stage3_unit4_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit4_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit4_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit4_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_24 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit4_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit4_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_24[0][0]          
-__________________________________________________________________________________________________
-add_11 (Add)                    (None, 14, 14, 256)  0           stage3_unit4_conv2[0][0]         
-                                                                 add_10[0][0]                     
-__________________________________________________________________________________________________
-stage3_unit5_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_11[0][0]                     
-__________________________________________________________________________________________________
-stage3_unit5_relu1 (Activation) (None, 14, 14, 256)  0           stage3_unit5_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_25 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit5_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit5_conv1 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_25[0][0]          
-__________________________________________________________________________________________________
-stage3_unit5_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit5_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit5_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit5_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_26 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit5_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit5_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_26[0][0]          
-__________________________________________________________________________________________________
-add_12 (Add)                    (None, 14, 14, 256)  0           stage3_unit5_conv2[0][0]         
-                                                                 add_11[0][0]                     
-__________________________________________________________________________________________________
-stage3_unit6_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_12[0][0]                     
-__________________________________________________________________________________________________
-stage3_unit6_relu1 (Activation) (None, 14, 14, 256)  0           stage3_unit6_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_27 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit6_relu1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit6_conv1 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_27[0][0]          
-__________________________________________________________________________________________________
-stage3_unit6_bn2 (BatchNormaliz (None, 14, 14, 256)  1024        stage3_unit6_conv1[0][0]         
-__________________________________________________________________________________________________
-stage3_unit6_relu2 (Activation) (None, 14, 14, 256)  0           stage3_unit6_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_28 (ZeroPadding2 (None, 16, 16, 256)  0           stage3_unit6_relu2[0][0]         
-__________________________________________________________________________________________________
-stage3_unit6_conv2 (Conv2D)     (None, 14, 14, 256)  589824      zero_padding2d_28[0][0]          
-__________________________________________________________________________________________________
-add_13 (Add)                    (None, 14, 14, 256)  0           stage3_unit6_conv2[0][0]         
-                                                                 add_12[0][0]                     
-__________________________________________________________________________________________________
-stage4_unit1_bn1 (BatchNormaliz (None, 14, 14, 256)  1024        add_13[0][0]                     
-__________________________________________________________________________________________________
-stage4_unit1_relu1 (Activation) (None, 14, 14, 256)  0           stage4_unit1_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_29 (ZeroPadding2 (None, 16, 16, 256)  0           stage4_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit1_conv1 (Conv2D)     (None, 7, 7, 512)    1179648     zero_padding2d_29[0][0]          
-__________________________________________________________________________________________________
-stage4_unit1_bn2 (BatchNormaliz (None, 7, 7, 512)    2048        stage4_unit1_conv1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit1_relu2 (Activation) (None, 7, 7, 512)    0           stage4_unit1_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_30 (ZeroPadding2 (None, 9, 9, 512)    0           stage4_unit1_relu2[0][0]         
-__________________________________________________________________________________________________
-stage4_unit1_conv2 (Conv2D)     (None, 7, 7, 512)    2359296     zero_padding2d_30[0][0]          
-__________________________________________________________________________________________________
-stage4_unit1_sc (Conv2D)        (None, 7, 7, 512)    131072      stage4_unit1_relu1[0][0]         
-__________________________________________________________________________________________________
-add_14 (Add)                    (None, 7, 7, 512)    0           stage4_unit1_conv2[0][0]         
-                                                                 stage4_unit1_sc[0][0]            
-__________________________________________________________________________________________________
-stage4_unit2_bn1 (BatchNormaliz (None, 7, 7, 512)    2048        add_14[0][0]                     
-__________________________________________________________________________________________________
-stage4_unit2_relu1 (Activation) (None, 7, 7, 512)    0           stage4_unit2_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_31 (ZeroPadding2 (None, 9, 9, 512)    0           stage4_unit2_relu1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit2_conv1 (Conv2D)     (None, 7, 7, 512)    2359296     zero_padding2d_31[0][0]          
-__________________________________________________________________________________________________
-stage4_unit2_bn2 (BatchNormaliz (None, 7, 7, 512)    2048        stage4_unit2_conv1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit2_relu2 (Activation) (None, 7, 7, 512)    0           stage4_unit2_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_32 (ZeroPadding2 (None, 9, 9, 512)    0           stage4_unit2_relu2[0][0]         
-__________________________________________________________________________________________________
-stage4_unit2_conv2 (Conv2D)     (None, 7, 7, 512)    2359296     zero_padding2d_32[0][0]          
-__________________________________________________________________________________________________
-add_15 (Add)                    (None, 7, 7, 512)    0           stage4_unit2_conv2[0][0]         
-                                                                 add_14[0][0]                     
-__________________________________________________________________________________________________
-stage4_unit3_bn1 (BatchNormaliz (None, 7, 7, 512)    2048        add_15[0][0]                     
-__________________________________________________________________________________________________
-stage4_unit3_relu1 (Activation) (None, 7, 7, 512)    0           stage4_unit3_bn1[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_33 (ZeroPadding2 (None, 9, 9, 512)    0           stage4_unit3_relu1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit3_conv1 (Conv2D)     (None, 7, 7, 512)    2359296     zero_padding2d_33[0][0]          
-__________________________________________________________________________________________________
-stage4_unit3_bn2 (BatchNormaliz (None, 7, 7, 512)    2048        stage4_unit3_conv1[0][0]         
-__________________________________________________________________________________________________
-stage4_unit3_relu2 (Activation) (None, 7, 7, 512)    0           stage4_unit3_bn2[0][0]           
-__________________________________________________________________________________________________
-zero_padding2d_34 (ZeroPadding2 (None, 9, 9, 512)    0           stage4_unit3_relu2[0][0]         
-__________________________________________________________________________________________________
-stage4_unit3_conv2 (Conv2D)     (None, 7, 7, 512)    2359296     zero_padding2d_34[0][0]          
-__________________________________________________________________________________________________
-add_16 (Add)                    (None, 7, 7, 512)    0           stage4_unit3_conv2[0][0]         
-                                                                 add_15[0][0]                     
-__________________________________________________________________________________________________
-bn1 (BatchNormalization)        (None, 7, 7, 512)    2048        add_16[0][0]                     
-__________________________________________________________________________________________________
-relu1 (Activation)              (None, 7, 7, 512)    0           bn1[0][0]                        
-__________________________________________________________________________________________________
-global_average_pooling2d_1 (Glo (None, 512)          0           relu1[0][0]                      
-__________________________________________________________________________________________________
-dense_1 (Dense)                 (None, 100)          51200       global_average_pooling2d_1[0][0] 
-__________________________________________________________________________________________________
-activation_1 (Activation)       (None, 100)          0           dense_1[0][0]                    
-==================================================================================================
-Total params: 21,353,673
-Trainable params: 4,772,864
-Non-trainable params: 16,580,809
-__________________________________________________________________________________________________
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
