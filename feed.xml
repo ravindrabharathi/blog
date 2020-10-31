@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://ravindrabharathi.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravindrabharathi.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-31T01:51:46-05:00</updated><id>https://ravindrabharathi.github.io/blog/feed.xml</id><title type="html">Ravindra Bharathi’s Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Avs Device Provisioning</title><link href="https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning.html" rel="alternate" type="text/html" title="Avs Device Provisioning" /><published>2020-10-31T00:00:00-05:00</published><updated>2020-10-31T00:00:00-05:00</updated><id>https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning</id><content type="html" xml:base="https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning.html">&lt;p&gt;Provisioning an Alexa Voice Service Device under an Amazon account&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://ravindrabharathi.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ravindrabharathi.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-10-31T03:42:57-05:00</updated><id>https://ravindrabharathi.github.io/blog/feed.xml</id><title type="html">Ravindra Bharathi’s Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Avs Device Provisioning</title><link href="https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning.html" rel="alternate" type="text/html" title="Avs Device Provisioning" /><published>2020-10-31T00:00:00-05:00</published><updated>2020-10-31T00:00:00-05:00</updated><id>https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning</id><content type="html" xml:base="https://ravindrabharathi.github.io/blog/2020/10/31/avs-device-provisioning.html">&lt;p&gt;Provisioning an Alexa Voice Service Device under an Amazon account&lt;/p&gt;
 
 &lt;p&gt;Back in 2017 , my company was working on a product that embedded Amazon Alexa Voice service on device and my team was involved in the onboarding solution for the device.&lt;/p&gt;
 
@@ -70,7 +70,69 @@
 &lt;strong&gt;redirect_uri&lt;/strong&gt;:&lt;strong&gt;’’&lt;br /&gt;
 **},&lt;br /&gt;
 **json&lt;/strong&gt;: **true&lt;br /&gt;
-**};&lt;/p&gt;</content><author><name></name></author><summary type="html">Provisioning an Alexa Voice Service Device under an Amazon account</summary></entry><entry><title type="html">tf_utils</title><link href="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html" rel="alternate" type="text/html" title="tf_utils" /><published>2020-04-05T00:00:00-05:00</published><updated>2020-04-05T00:00:00-05:00</updated><id>https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification</id><content type="html" xml:base="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html">&lt;!--
+**};&lt;/p&gt;</content><author><name></name></author><summary type="html">Provisioning an Alexa Voice Service Device under an Amazon account</summary></entry><entry><title type="html">Convert A Raspberry Pi Into An Alexa Device</title><link href="https://ravindrabharathi.github.io/blog/2020/10/30/Convert-a-Raspberry-Pi-into-an-Alexa-device.html" rel="alternate" type="text/html" title="Convert A Raspberry Pi Into An Alexa Device" /><published>2020-10-30T00:00:00-05:00</published><updated>2020-10-30T00:00:00-05:00</updated><id>https://ravindrabharathi.github.io/blog/2020/10/30/Convert-a-Raspberry-Pi-into-an-Alexa-device</id><content type="html" xml:base="https://ravindrabharathi.github.io/blog/2020/10/30/Convert-a-Raspberry-Pi-into-an-Alexa-device.html">&lt;p&gt;&lt;strong&gt;Convert your Raspberry Pi into an Alexa device using Alexa Voice Service SDK&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Back in 2017 , my company was working on a product that embedded Amazon Alexa Voice Service (AVS) on device and my team was involved in the onboarding solution for the device.&lt;/p&gt;
+
+&lt;p&gt;In order to better understand the use cases, I installed Amazon Alexa Voice Service SDK on a Raspberry Pi .&lt;/p&gt;
+
+&lt;p&gt;Here is a video of a short interaction with Alexa Voice Service installed on Raspberry Pi &lt;a href=&quot;https://youtu.be/bajws_5RN8M&quot;&gt;https://youtu.be/bajws_5RN8M&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are interested in creating an Alexa device on Raspberry pi please follow the latest instructions using this link &lt;a href=&quot;https://developer.amazon.com/en-US/docs/alexa/avs-device-sdk/raspberry-pi.html&quot;&gt;https://developer.amazon.com/en-US/docs/alexa/avs-device-sdk/raspberry-pi.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Provisioning an AVS device under your Amazon Account&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are distributing such custom devices, you need to provide a way for the user to onboard Alexa under their Amazon account. I built a POC for this provisioning flow using Nodejs (and also a Java version). Here are the steps involved.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a developer account under Amazon if you don’t already have one.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Browse to &lt;a href=&quot;https://developer.amazon.com/alexa/console/avs/products&quot;&gt;https://developer.amazon.com/alexa/console/avs/products&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Click on Add New Product&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fill up the information regarding your device. Give it a Product Name and Product ID&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are the other options I chose for my device&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ravindrabharathi.github.io/blog/assets/img/2020-10-30-Convert-a-Raspberry-Pi-into-an-Alexa-device/media/image1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ravindrabharathi.github.io/blog/assets/img/2020-10-30-Convert-a-Raspberry-Pi-into-an-Alexa-device/media/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Save the product details&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Choose Security Profile and select create new profile .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fill up the option for security profile name and description and click Next .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The rest of the information like Profile ID, Client ID and Client secret are now automatically filled up for you .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I kept the options to just Web based flow but you may choose to add Android and iOS app integration (as we did in the final product)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fill up the allowed origin and callback URL details. Callback URl is the address of the page to which Amazon authorization service will redirect to with the result of User authorization . This is the service or page that needs to handle the authorization response.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;AVS Device Provisioning App flow&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is how the flow looks like&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ravindrabharathi.github.io/blog/assets/img/2020-10-30-Convert-a-Raspberry-Pi-into-an-Alexa-device/media/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The code for this App flow can be found under this repository &lt;a href=&quot;https://github.com/ravindrabharathi/AVS-provisioning-nodejs&quot;&gt;https://github.com/ravindrabharathi/AVS-provisioning-nodejs&lt;/a&gt;. Although I have not updated the code for recent version of dependency libraries , the code still works as the screenshots above are recent. I’ll follow up with another post explaining the code structure and important parts that handle authorization, provisioning , etc&lt;/p&gt;</content><author><name></name></author><summary type="html">Convert your Raspberry Pi into an Alexa device using Alexa Voice Service SDK</summary></entry><entry><title type="html">tf_utils</title><link href="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html" rel="alternate" type="text/html" title="tf_utils" /><published>2020-04-05T00:00:00-05:00</published><updated>2020-04-05T00:00:00-05:00</updated><id>https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification</id><content type="html" xml:base="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
