@@ -4,19 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>tf_utils | Ravindra Bharathi’s Blog</title>
+<title>tf_utils - A package for image classification using tensorflow2, TFRecords, tf.data | Ravindra Bharathi’s Blog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="tf_utils" />
+<meta property="og:title" content="tf_utils - A package for image classification using tensorflow2, TFRecords, tf.data" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Utility package for training CNN using tensorflow2, TFRecords, tf.data" />
 <meta property="og:description" content="Utility package for training CNN using tensorflow2, TFRecords, tf.data" />
 <link rel="canonical" href="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html" />
 <meta property="og:url" content="https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html" />
 <meta property="og:site_name" content="Ravindra Bharathi’s Blog" />
+<meta property="og:image" content="https://ravindrabharathi.github.io/blog/images/tf_utils.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-04-05T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html","@type":"BlogPosting","headline":"tf_utils","dateModified":"2020-04-05T00:00:00-05:00","datePublished":"2020-04-05T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html"},"description":"Utility package for training CNN using tensorflow2, TFRecords, tf.data","@context":"https://schema.org"}</script>
+{"url":"https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html","@type":"BlogPosting","headline":"tf_utils - A package for image classification using tensorflow2, TFRecords, tf.data","dateModified":"2020-04-05T00:00:00-05:00","datePublished":"2020-04-05T00:00:00-05:00","image":"https://ravindrabharathi.github.io/blog/images/tf_utils.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ravindrabharathi.github.io/blog/tensorflow2/image%20classification/cnn/trecords/confusion%20matrix/image%20augmentation/2020/04/05/tf-utils-utility-package-for-image-classification.html"},"description":"Utility package for training CNN using tensorflow2, TFRecords, tf.data","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ravindrabharathi.github.io/blog/feed.xml" title="Ravindra Bharathi's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">tf_utils</h1><p class="page-description">Utility package for training CNN using tensorflow2, TFRecords, tf.data</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-05T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">tf_utils - A package for image classification using tensorflow2, TFRecords, tf.data</h1><p class="page-description">Utility package for training CNN using tensorflow2, TFRecords, tf.data</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-05T00:00:00-05:00" itemprop="datePublished">
         Apr 5, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -123,7 +124,7 @@ window.onload = wrap_img;
 <p><a href="https://github.com/ravindrabharathi/tf_utils">tf_utils</a> is a Utility package for training CNN using tensorflow2, TFRecords, tf.data
 Supports the following</p>
 <ol>
-<li>Download dataset (cifar10 for now..more will be added) from source url</li>
+<li>Download dataset (CIFAR-10 in main branch and CIFAR-100 in add_cifar100 branch, more to be added) from source url</li>
 <li>Store the Dataset as TFRecords</li>
 <li>Retreve image data as tf.data.TFRecordDataset</li>
 <li>Image Augmentation (random-pad_crop, flip-left_right, cutout) of Image Batches</li>
@@ -131,7 +132,7 @@ Supports the following</p>
 <li>Plot misclassified images </li>
 <li>Plot Confusion Matrix</li>
 </ol>
-<p>This post contains the instructions on how to use this package and as an illustration we will build and train a Convolutional Neural Network to classiff images in CIFAR-10 using utility functions in this package.</p>
+<p>This post contains the instructions on how to use this package and as an illustration we will build and train a Convolutional Neural Network to classify images in CIFAR-10 using utility functions in this package.</p>
 
 </div>
 </div>
@@ -346,7 +347,7 @@ Finished &#39;get_cifar10_and_create_tfrecords&#39; in 18.8262 secs
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="create-train-and-test-dataset">create train and test dataset<a class="anchor-link" href="#create-train-and-test-dataset"> </a></h3>
+<h3 id="Create-the-train-and-test-datasets">Create the train and test datasets<a class="anchor-link" href="#Create-the-train-and-test-datasets"> </a></h3>
 </div>
 </div>
 </div>
@@ -396,7 +397,7 @@ Finished &#39;get_eval_ds&#39; in 0.1215 secs
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="import-visualization-module">import visualization module<a class="anchor-link" href="#import-visualization-module"> </a></h3>
+<h3 id="Import-visualization-module-from-tf_utils-package">Import visualization module from tf_utils package<a class="anchor-link" href="#Import-visualization-module-from-tf_utils-package"> </a></h3>
 </div>
 </div>
 </div>
@@ -419,7 +420,7 @@ Finished &#39;get_eval_ds&#39; in 0.1215 secs
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="plot-images-from-train-dataset-,-train-dataset-by-default-uses-image-augmenttation-of-cutout,flip-left-right,random-pad-crop">plot images from train dataset , train dataset by default uses image augmenttation of cutout,flip-left-right,random-pad-crop<a class="anchor-link" href="#plot-images-from-train-dataset-,-train-dataset-by-default-uses-image-augmenttation-of-cutout,flip-left-right,random-pad-crop"> </a></h3>
+<h3 id="Plot-images-from-train-dataset-,-train-dataset-by-default-uses-image-augmenttation-of-cutout,flip-left-right,random-pad-crop">Plot images from train dataset , train dataset by default uses image augmenttation of cutout,flip-left-right,random-pad-crop<a class="anchor-link" href="#Plot-images-from-train-dataset-,-train-dataset-by-default-uses-image-augmenttation-of-cutout,flip-left-right,random-pad-crop"> </a></h3>
 </div>
 </div>
 </div>
@@ -1206,7 +1207,7 @@ IZHC4CckUv4fdgrmJJjIAfoAAAAASUVORK5CYII=
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="build-and-compile-the-model-using-Adam-optimizer-and-categorical-cross-entropy-as-the-loss-function">build and compile the model using Adam optimizer and categorical cross entropy as the loss function<a class="anchor-link" href="#build-and-compile-the-model-using-Adam-optimizer-and-categorical-cross-entropy-as-the-loss-function"> </a></h3>
+<h3 id="Build-and-compile-the-model-using-Adam-optimizer-and-categorical-cross-entropy-as-the-loss-function">Build and compile the model using Adam optimizer and categorical cross entropy as the loss function<a class="anchor-link" href="#Build-and-compile-the-model-using-Adam-optimizer-and-categorical-cross-entropy-as-the-loss-function"> </a></h3>
 </div>
 </div>
 </div>
@@ -1342,7 +1343,7 @@ Epoch 25/25
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="plot-misclassifed-images">plot misclassifed images<a class="anchor-link" href="#plot-misclassifed-images"> </a></h3><p>Let us now plot some mis-classified images using the visualization module to get an idea of what the model is getting wrong</p>
+<h3 id="Plot-misclassifed-images">Plot misclassifed images<a class="anchor-link" href="#Plot-misclassifed-images"> </a></h3><p>Let us now plot some mis-classified images using the visualization module to get an idea of what the model is getting wrong</p>
 
 </div>
 </div>
