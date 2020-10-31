@@ -11,9 +11,9 @@ Extensive experience in developing and delivering solutions for multiple domains
    
 Experience working with Agile / SCRUM Methodologies.
 
-**Linkedin** : https://www.linkedin.com/in/sravindrabharathi/
+**Linkedin** : [https://www.linkedin.com/in/sravindrabharathi/](https://www.linkedin.com/in/sravindrabharathi/)
 
-**Github** : https://github.com/ravindrabharathi
+**Github** : [https://github.com/ravindrabharathi](https://github.com/ravindrabharathi)
 
-**twitter** : https://twitter.com/srbharathi
+**twitter** : [https://twitter.com/srbharathi](https://twitter.com/srbharathi)
 
