@@ -39,8 +39,13 @@ baseurl: "/blog" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: srbharathi
-    github: ravindrabharathi
+    - { platform: rss, user_url: "/feed.xml" }
+    - { platform: github, user_url: "https://github.com/ravindrabharathi/" }
+    - { platform: twitter, user_url: "https://twitter.com/srbharathi" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/sravindrabharathi/" }
+#    twitter: srbharathi
+#    github: ravindrabharathi
+
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -100,7 +105,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima@<296bf6b872b8450529bee1e48d0ca9be200a4be5
+remote_theme: jekyll/minima
 
 titles_from_headings:
   enabled:     true
